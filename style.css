@@ -82,14 +82,14 @@ body{
 .containerAbout{
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 0.8fr .3fr;
+    grid-template-columns: .5fr 1fr 1fr;
+    grid-template-rows: 1fr  0.8fr .3fr;
     grid-template-areas: 
-        "sidebar main main main main"
-        "sidebar content1 content1 content2 content2"
-        "sidebar content3 content3 content2 content2"
-        "footer footer footer footer footer"
-        "footer footer footer footer footer";
+        "sidebar main  main"
+        "sidebar content1 content2"
+        "sidebar content3 content2"
+        "footer footer footer"
+        "footer footer footer";
 }
 
 main{
@@ -225,6 +225,21 @@ footer a:hover{
 
 .content8 ul li a{
     font-size: 12px;
+}
+
+/* Artists */
+
+.containerArtist{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.8fr .3fr;
+    grid-template-areas: 
+        "sidebar main main main main"
+        "sidebar content1 content1 content2 content2"
+        "sidebar content3 content3 content2 content2"
+        "footer footer footer footer footer"
+        "footer footer footer footer footer";
 }
 
 /* Media queries -- Index */
