@@ -88,7 +88,6 @@ body{
         "sidebar main main"
         "sidebar content1 content2"
         "sidebar content3 content2"
-        "footer footer footer"
         "footer footer footer";
 }
 
@@ -224,7 +223,7 @@ footer a:hover{
     font-size: 12px;
 }
 
-/* Artists */
+/* ----------- Artists ----------- */
 
 .containerArtist{
     display: grid;
@@ -235,7 +234,6 @@ footer a:hover{
         "sidebar main main"
         "sidebar artist1 artist2"
         "sidebar artist3 artist4"
-        "footer footer footer"
         "footer footer footer";
 }
 
@@ -308,6 +306,20 @@ footer a:hover{
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, .5);
 }
 
+/* ----------- Specific Artist Page ----------- */
+.containerArtist1{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: .5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr .5fr .5fr;
+    grid-template-areas: 
+        "sidebar main main"
+        "sidebar jack1 jack2"
+        "sidebar jack3 jack3"
+        "sidebar jack4 jack4"
+        "sidebar jack5 jack5"
+        "footer footer footer";
+}
 
 @media only screen and (max-width: 1200px){
     .indexContainer{
