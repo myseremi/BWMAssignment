@@ -20,6 +20,10 @@ body{
     font-family: 'noto sans', sans-serif;
 }
 
+a{
+    color: #ffffff;
+}
+
 
 /* ----------- Index ----------- */
 .indexContainer{
@@ -52,7 +56,6 @@ body{
 }
 
 .index2 a{
-    color: #ffffff;
     font-size: 22px;
 }
 
@@ -95,6 +98,8 @@ main{
     grid-area: main;
     margin: 50px 50px 5px 50px;
     padding: 2em;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .sidebar{
@@ -128,7 +133,9 @@ main{
 .content1 {
     grid-area: content1;
     margin: 5px 50px 5px 50px;
-    padding: 2em 2em 2em 2em;
+    padding: 2em;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .content2 {
@@ -168,7 +175,6 @@ footer p{
 footer a{
     text-decoration: none;
     font-size: 15px;
-    color: #ffffff;
 }
 
 footer a:hover{
@@ -254,11 +260,12 @@ footer a:hover{
     font-size: 30px;
     text-align: center;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    transition: box-shadow 500ms;
+    transition: box-shadow 500ms, font-size 800ms;
 }
 
 .artist1:hover{
-    box-shadow: 10px 10px 50px 0 rgba(0, 0, 0, .5);
+    box-shadow: 10px 10px 50px 0 rgba(0, 0, 0, 1);
+    font-size: 40px;
 }
 
 .artist2{
@@ -270,10 +277,11 @@ footer a:hover{
     grid-area: artist2;
     font-size: 30px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    transition: box-shadow 500ms;
+    transition: box-shadow 500ms, font-size 800ms;
 }
 .artist2:hover{
-    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 1);
+    font-size: 40px;
 }
 
 .artist3{
@@ -285,10 +293,11 @@ footer a:hover{
     grid-area: artist3;
     font-size: 30px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    transition: box-shadow 500ms;
+    transition: box-shadow 500ms, font-size 800ms;
 }
 .artist3:hover{
-    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 1);
+    font-size: 40px;
 }
 
 .artist4{
@@ -300,25 +309,172 @@ footer a:hover{
     grid-area: artist4;
     font-size: 30px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    transition: box-shadow 500ms;
+    transition: box-shadow 500ms, font-size 800ms;
 }
 .artist4:hover{
-    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 1);
+    font-size: 40px;
 }
 
 /* ----------- Specific Artist Page ----------- */
 .containerArtist1{
     display: grid;
     height: 100vh;
+    grid-template-columns: .75fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr .5fr;
+    grid-template-areas: 
+        "sidebar main main main"
+        "sidebar jack1 jack1 jack2"
+        "sidebar title title title"
+        "sidebar jack3 jack4 jack5"
+        "sidebar title2 title2 title2"
+        "sidebar video1 video2 video3"
+        "sidebar title3 title3 title3"
+        "sidebar event1 event2 event3"
+        "sidebar content3 content3 content3"
+        "footer footer footer footer";
+}
+
+.jack1{
+    grid-area: jack1;
+    margin: 0;
+    padding: 2em 5em;
+    /* background: palevioletred; */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.jack2{
+    grid-area: jack2;
+    padding: 2em 5em 2em 0;
+}
+
+.title{
+    grid-area: title;
+    margin: 0 80px;
+}
+
+.title h2{
+    margin-bottom: 0;
+}
+
+.jack3 p{
+    margin-bottom: 10px;
+}
+
+.jack4 p{
+    margin-bottom: 10px;
+}
+
+.jack3{
+    grid-area: jack3;
+    margin: 5px 50px;
+    padding: 2em;
+    /* background: rosybrown; */
+}
+
+.jack4{
+    grid-area: jack4;
+    margin: 5px 0;
+    padding: 2em 0;
+    /* background: rosybrown; */
+}
+
+.jack5{
+    grid-area: jack5;
+    margin: 5px 0;
+    padding: 2em 0;
+}
+
+.title2 h2{
+    margin: 0 30px;
+    padding: 2em;
+}
+
+.video1{
+    grid-area: video1;
+}
+
+.video2{
+    grid-area: video2;
+}
+
+.video3{
+    grid-area: video3;
+}
+
+.title3{
+    grid-area: title3;
+}
+
+.event1{
+    grid-area: event1;
+}
+
+.event2{
+    grid-area: event2;
+}
+
+.event3{
+    grid-area: event3;
+}
+
+.button{
+    background-color: #000000; 
+    border: none;
+    color: #ffffff;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 300ms;
+    max-width: 100%;
+    width: 320px;
+    border-radius: 8px;
+  }
+
+.button:hover {
+    opacity: 1;
+}
+
+
+.containerEvent{
+    display: grid;
+    height: 100vh;
     grid-template-columns: .5fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr .5fr .5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr .5fr;
     grid-template-areas: 
         "sidebar main main"
-        "sidebar jack1 jack2"
-        "sidebar jack3 jack3"
-        "sidebar jack4 jack4"
-        "sidebar jack5 jack5"
+        "sidebar search search"
+        "sidebar list list"
+        "sidebar more more"
         "footer footer footer";
+}
+
+.list{
+    grid-area: list;
+    margin: 5px 50px ;
+    padding: 2em;
+    /* background: #85a7eb; */
+}
+
+
+table{
+    width: 100%;
+}
+
+table, th, td{
+    padding: .7em;
+}
+
+.more{
+    grid-area: more;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 1200px){
@@ -348,6 +504,10 @@ footer a:hover{
     .index2{
         margin: auto;
         text-align: center;
+    }
+
+    p{
+        font-size: 14px;
     }
 }
 
@@ -392,6 +552,8 @@ footer a:hover{
             "artist3 artist4"
             "footer footer";
     }
+
+    
 }
 
 @media only screen and (max-width: 720px){
@@ -427,7 +589,7 @@ footer a:hover{
 }
 
 
-/* Images */
+/* Media */
 .logo{
     max-width: 100%;
 }
@@ -446,6 +608,20 @@ footer a:hover{
     max-width: 100%;
 }
 
+.album{
+    max-width: 100%;
+    margin-right: 20px;
+}
+
+
+iframe{
+    max-width: 100%;
+}
+
+.player{
+    max-width: 100%;
+}
+
 /*Index Background*/
 #background {
     position: fixed;
@@ -454,6 +630,5 @@ footer a:hover{
     min-width: 100%;
     min-height: 100%;
 }
-
 
 
