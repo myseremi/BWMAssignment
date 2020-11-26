@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+@font-face{
+    font-family: 'vcr osd mono';
+    src: url(fonts/VCR_OSD_MONO.ttf)
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +30,6 @@ body{
 a{
     color: #ffffff;
 }
-
 
 /* ----------- Index ----------- */
 .indexContainer{
