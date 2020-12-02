@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <title>Jack and the Sparrows | Blue Water Music</title>
     <meta name="author" content="Serena Sina">
     <meta name="description" content="Blue Water Music formed in 2020 with the aim of providing an efficient, affordable, and easy-to-use digital music distribution service for artists and record labels to sell music online.">
 
     <link rel="stylesheet" href="style.css">
-    <a href="https://fontmeme.com/fonts/vcr-osd-mono-font/"></a>
 </head>
 <body>
     <div class="containerArtist1">
         <!--######### SIDEBAR ##########-->
-        <div class="sidebar">
-            <img src="img/logo.png" class="logo">
+        <nav class="sidebar">
+            <img src="img/logo.png" class="logo" alt="BWM Logo">
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="artists.html">Our Artists</a></li>
                 <li><a href="events.html">Events and Gigs</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-        </div>
+        </nav>
 
         <!--######### CONTENT ##########-->
         <main>
             <h1>Jack and The Sparrows</h1>
-            <iframe width="1355" height="720" src="https://www.youtube.com/embed/qidpHqfKQEI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="1355" height="720" src="https://www.youtube.com/embed/qidpHqfKQEI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </main>
         <div class="jack1">
             <h2>Biography</h2>
@@ -41,10 +41,11 @@
         <div class="title" >
             <h2>Albums and Tracks</h2>
         </div>
+
         <div class="jack3">
             <img src="img/jack/album1.jpg" width="150" height="150" alt="Album Cover" style="float:left" class="album">
             <p><b>Impulse Reaction (2020)</b></p>
-            <audio controls id="player">
+            <audio controls class="player">
                 <source src="audio/song1.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
@@ -53,17 +54,8 @@
         <div class="jack4">
             <img src="img/jack/album2.jpg" width="150" height="150" alt="Album Cover" style="float:left" class="album">
             <p><b>Boundaries (2019)</b></p>
-            <audio controls id="player">
+            <audio controls class="player">
                 <source src="audio/song2.mp3" type="audio/mpeg">
-                Your browser does not support the audio tag.
-            </audio>
-        </div>
-        
-        <div class="jack5">
-            <img src="img/jack/album3.jpg" width="150" height="150" alt="Album Cover" style="float:left" class="album">
-            <p><b>Spilled Beans (2019)</b></p>
-            <audio controls id="player">
-                <source src="audio/song3.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
         </div>
@@ -73,15 +65,11 @@
         </div>
 
         <div class="video1">
-            <iframe width="340" height="200" src="https://www.youtube.com/embed/wXYT3KN0mHQ?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wXYT3KN0mHQ?controls=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div class="video2">
-            <iframe width="340" height="200" src="https://www.youtube.com/embed/wXYT3KN0mHQ?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="video3">
-            <iframe width="340" height="200" src="https://www.youtube.com/embed/wXYT3KN0mHQ?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bBdsY_zsv_U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div class="title3">
@@ -102,20 +90,13 @@
             <button class="button button1"><b>Book now</b></button>
         </div>
 
-        <div class="event3">
-            <p><b>Adventure Time TOUR</b></p>
-            <p>Feb 18, 2021</p>
-            <p><i>Malone’s - Glasgow</i></p>
-            <button class="button button1"><b>Book now</b></button>
-        </div>
-
         <div class="content3">
             <h2>Socials</h2>
-            <a href="#"><img src="img/spotify.png" class="social" alt="Spotify icon"></a>
-            <a href="#"><img src="img/youtube.png" class="social" alt="Youtube icon"></a>
-            <a href="#"><img src="img/soundcloud.png" class="social" alt="Soundcloud icon"></a>
-            <a href="#"><img src="img/twitter.png" class="social" alt="Twitter icon"></a>
-            <a href="#"><img src="img/FB.png" class="social" alt="Facebook icon"></a>
+            <a href="https://open.spotify.com/artist/6fVcDUckTwxqg56qNsEvUr"><img src="img/spotify.png" class="social" alt="Spotify icon"></a>
+            <a href="https://www.youtube.com/channel/UCxHXsPbhkjQHc6ECDlYsuVg"><img src="img/youtube.png" class="social" alt="Youtube icon"></a>
+            <a href="https://soundcloud.com/frightened-rabbit"><img src="img/soundcloud.png" class="social" alt="Soundcloud icon"></a>
+            <a href="https://twitter.com/FRabbits?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="img/twitter.png" class="social" alt="Twitter icon"></a>
+            <a href="https://www.facebook.com/frightenedrabbit/"><img src="img/FB.png" class="social" alt="Facebook icon"></a>
         </div>
 
         <!--######### FOOTER ##########-->
@@ -123,19 +104,19 @@
             <div class="content4">
                 <h1>Support:</h1>
                 <a href="#">FAQs</a>
-                </br>
-                </br>
+                <br>
+                <br>
                 <p>077 0965 0353</p>
                 <p>bwm@temporary-mail.net</p>
             </div>
             <div class="content5">
                 <h1>Socials:</h1>
                 <ul>
-                    <li><a href="#">Spotify</a></li>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">Soundcloud</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://www.spotify.com/uk/">Spotify</a></li>
+                    <li><a href="https://www.youtube.com/">Youtube</a></li>
+                    <li><a href="https://soundcloud.com/">Soundcloud</a></li>
+                    <li><a href="https://soundcloud.com/">Twitter</a></li>
+                    <li><a href="https://facebook.com/">Facebook</a></li>
                 </ul>
             </div>
             <div class="content6">

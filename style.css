@@ -326,19 +326,19 @@ footer a:hover{
 .containerArtist1{
     display: grid;
     height: 100vh;
-    grid-template-columns: .75fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr .5fr;
+    grid-template-columns: .5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr .5fr;
     grid-template-areas: 
-        "sidebar main main main"
-        "sidebar jack1 jack1 jack2"
-        "sidebar title title title"
-        "sidebar jack3 jack4 jack5"
-        "sidebar title2 title2 title2"
-        "sidebar video1 video2 video3"
-        "sidebar title3 title3 title3"
-        "sidebar event1 event2 event3"
-        "sidebar content3 content3 content3"
-        "footer footer footer footer";
+        "sidebar main main"
+        "sidebar jack1 jack2"
+        "sidebar title title"
+        "sidebar jack3 jack4"
+        "sidebar title2 title2"
+        "sidebar video1 video2"
+        "sidebar title3 title3"
+        "sidebar event1 event2"
+        "sidebar content3 content3"
+        "footer footer footer";
 }
 
 .jack1{
@@ -357,11 +357,7 @@ footer a:hover{
 
 .title{
     grid-area: title;
-    margin: 0 80px;
-}
-
-.title h2{
-    margin-bottom: 0;
+    margin: 20px 80px 0px 80px;
 }
 
 .jack3 p{
@@ -374,55 +370,44 @@ footer a:hover{
 
 .jack3{
     grid-area: jack3;
-    margin: 5px 50px;
+    margin-left: 50px;
     padding: 2em;
-    /* background: rosybrown; */
 }
 
 .jack4{
     grid-area: jack4;
-    margin: 5px 0;
-    padding: 2em 0;
-    /* background: rosybrown; */
-}
-
-.jack5{
-    grid-area: jack5;
-    margin: 5px 0;
-    padding: 2em 0;
-}
-
-.title2 h2{
-    margin: 0 30px;
+    margin-left: 50px;
     padding: 2em;
+}
+
+.title2{
+    grid-area: title2;
+    margin: 20px 80px 0px 80px;
 }
 
 .video1{
     grid-area: video1;
+    margin-left: 80px;
 }
 
 .video2{
     grid-area: video2;
-}
-
-.video3{
-    grid-area: video3;
+    margin-left: 80px;
 }
 
 .title3{
     grid-area: title3;
+    margin: 60px 80px 0px 80px;
 }
 
 .event1{
     grid-area: event1;
+    margin-left: 80px;
 }
 
 .event2{
     grid-area: event2;
-}
-
-.event3{
-    grid-area: event3;
+    margin-left: 80px;
 }
 
 .button{
@@ -447,7 +432,6 @@ footer a:hover{
     opacity: 1;
 }
 
-
 .containerEvent{
     display: grid;
     height: 100vh;
@@ -468,13 +452,18 @@ footer a:hover{
     /* background: #85a7eb; */
 }
 
-
 table{
     width: 100%;
+    border-collapse: collapse;
+}
+
+table th{
+    font-family: 'vcr osd mono', sans-serif;
+    font-size: 20px;
 }
 
 table, th, td{
-    padding: .7em;
+    padding: 1.2em;
 }
 
 .more{
@@ -483,39 +472,39 @@ table, th, td{
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 1200px){
-    .indexContainer{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }
-    .index1{
-        grid-column: 1/2;
-        grid-row: 1/2;
-        margin-left: 70px;
-        width: 70%;
-    }
-    .index2{
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }    
-    .name{
-        font-size: 24px;
-    }
+.more:hover{
+    color: #DC143C;
 }
 
-@media only screen and (max-width: 540px){
-    .index2 a{
-        font-size: 18px;
-    }
-    .index2{
-        margin: auto;
-        text-align: center;
-    }
-
-    p{
-        font-size: 14px;
-    }
+.search{
+    margin: 5px 80px;
 }
+
+input{
+    width: 100%;
+    padding: 1em;
+}
+
+.containerContact{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: .75fr 3fr;
+    grid-template-rows: 1fr 1fr .5fr;
+    grid-template-areas: 
+        "sidebar main "
+        "sidebar form"
+        "footer footer";
+}
+
+.form{
+    grid-area: form;
+    margin: 30px 80px;
+    background: #EBEBEB;
+    padding: 2em;
+    border-radius: 12px;
+}
+
+
 
 @media only screen and (max-width:1279px){
     .containerAbout{
@@ -559,10 +548,76 @@ table, th, td{
             "footer footer";
     }
 
-    
+    .containerEvent{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "sidebar sidebar"
+            "main main"
+            "search search" 
+            "list list"
+            "more more"
+            "footer footer";
+    }
+
+    .containerArtist1{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-areas: 
+        "sidebar sidebar"
+        "main main"
+        "jack1 jack1"
+        "jack2 jack2"
+        "title title"
+        "jack3 jack4"
+        "title2 title2"
+        "video1 video2"
+        "title3 title3"
+        "event1 event2"
+        "content3 content3"
+        "footer footer";
+    }
+
+    .jack2{
+        margin-left: 80px;
+    }
+    audio.player{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .containerContact{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-areas: 
+            "sidebar"
+            "main"
+            "form"
+            "footer"
+    }
 }
 
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 1200px){
+    .indexContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .index1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-left: 70px;
+        width: 70%;
+    }
+    .index2{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }    
+    .name{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 920px){
     footer{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr .1fr .1fr;
@@ -573,14 +628,103 @@ table, th, td{
             "content8"
             "content7";
     }
+
+    .search{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .containerArtist1{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(13, 1fr);
+        grid-template-areas: 
+        "sidebar"
+        "main"
+        "jack1"
+        "jack2"
+        "title"
+        "jack3" 
+        "jack4"
+        "title2"
+        "video1"
+        "video2"
+        "title3"
+        "event1"
+        "event2"
+        "content3"
+        "footer";
+    }
+
+    .form .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+
+      .containerArtist{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+            "sidebar"
+            "main"
+            "artist1"
+            "artist2"
+            "artist3"
+            "artist4"
+            "footer";
+      }
+
+      .artist1, .artist3{
+          margin-right: 80px;
+      }
+
+      .artist2, .artist4{
+          margin-left: 80px;
+      }
+
+}
+
+@media only screen and (max-width: 540px){
+    .index2 a{
+        font-size: 18px;
+    }
+    .index2{
+        margin: auto;
+        text-align: center;
+    }
+
+    table thead{
+        display: none;
+    }
+
+    table tbody tr td{
+        display: block;
+        width: 100%;
+        padding: .7em;
+    }
+
+    table td{
+        text-align: left;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .spaceUnder{
+        margin-bottom: 40px;
+    }
 }
 
 @media only screen and (max-width:320px){
     .sidebar ul li a{
         font-size: 16px;
     }
-    
-    
+       
     footer h1{
         font-size: 18px;
     }
@@ -594,6 +738,60 @@ table, th, td{
     }
 }
 
+/* Form */
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #1C1D1F;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .row label{
+      font-size: 14px;
+  }
+
+input[type="checkbox"] {
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
 
 /* Media */
 .logo{
@@ -619,13 +817,9 @@ table, th, td{
     margin-right: 20px;
 }
 
-
 iframe{
     max-width: 100%;
-}
-
-.player{
-    max-width: 100%;
+    max-height: 100%;
 }
 
 /*Index Background*/
